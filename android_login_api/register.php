@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @author Ravi Tamada
- * @link http://www.androidhive.info/2012/01/android-login-and-registration-with-php-mysql-and-sqlite/ Complete tutorial
- */
-
 require_once 'include/DB_Functions.php';
 $db = new DB_Functions();
 
@@ -22,7 +17,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
     if ($db->isUserExisted($email)) {
         // user already existed
         $response["error"] = TRUE;
-        $response["error_msg"] = "User already existed with " . $email;
+        $response["error_msg"] = "ผู้ใช้งานนี้มีการใช้งานอยู่แล้ว " . $email;
         echo json_encode($response);
     } else {
         // create a new user
@@ -39,13 +34,13 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
         } else {
             // user failed to store
             $response["error"] = TRUE;
-            $response["error_msg"] = "Unknown error occurred in registration!";
+            $response["error_msg"] = "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุในการลงทะเบียน!";
             echo json_encode($response);
         }
     }
 } else {
     $response["error"] = TRUE;
-    $response["error_msg"] = "Required parameters (name, email or password) is missing!";
+    $response["error_msg"] = "ระบบร้องขอตัวแปร (name, email or password) ที่หายไป!";
     echo json_encode($response);
 }
 ?>
