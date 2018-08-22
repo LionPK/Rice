@@ -1,15 +1,15 @@
 <?php 
-$Datalogin = Session::get('edituser');
-
-?>
- <div class="col-lg-12">
-                    <div class="card">
-                      <div class="card-header">
-                        <strong>แก้ไขข้อมูลผู้ใช้งาน</strong> 
-                      </div>
-                      <div class="card-body card-block">
-                        <form action="aftereditpass" method="post" enctype="multipart/form-data" class="form-horizontal">
-                          <div class="row form-group"></div>
+$Datalogin = Session::get('edituser'); ?>
+     <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-success">
+                  <h4 class="card-title">แก้ไขรหัสผ่านผู้ดูแล</h4>
+                </div>
+                <div class="card-body">
+                  <form action="aftereditpass" method="post" enctype="multipart/form-data" class="form-horizontal">
 
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">รหัสผู้ใช้</label></div>
@@ -41,21 +41,25 @@ $Datalogin = Session::get('edituser');
                       <div class="card-footer">
                        <center>
                         <div id="submit1">
-                            <button id="bntsave" type="submit" class="btn btn-success btn-sm" disabled="disabled "OnClick="chkLength();">บันทึก</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="<?php echo URL;?>UserInfor/usera" class="btn btn-danger btn-sm" role="button">ยกเลิก </a>
+                            <button id="bntsave" type="submit" class="btn btn-success btn-sm" disabled="disabled "OnClick="chkLength();"><i class="material-icons">autorenew</i>  ยืนยันการรีเส็ต</button>
+                            <a href="<?php echo URL;?>UserInfor/usera" class="btn btn-danger btn-sm" role="button"><i class="material-icons">cancel</i>  ยกเลิก</a>
                         </div>
                         
                       </center>                 
                       </div>
                     </div>
+                    <div class="clearfix"></div>
                   </form>
-                     <!-- Right Panel -->
-        <script language="JavaScript">
-          function chkLength()
-             {
-              alert('String Length = ' + document.frmMain.txtString.value.length);
-             }
-          </script>
+                </div>
+              </div>
+            </div>
+
+<script language="JavaScript">
+  function chkLength()
+    {
+      alert('String Length = ' + document.frmMain.txtString.value.length);
+    }
+</script>
 <script type="text/javascript">
 
   function passwordcheck() {
@@ -80,9 +84,23 @@ $Datalogin = Session::get('edituser');
 }
 </script>
 
+    <!--   Core JS Files   -->
+    <script src="<?php echo URL; ?>/assets/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Chartist JS -->
+    <script src="<?php echo URL; ?>/assets/js/plugins/chartist.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="<?php echo URL; ?>/assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="<?php echo URL; ?>/assets/js/material-dashboard.min.js?v=2.1.0" type="text/javascript"></script>
+    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+    <script src="<?php echo URL; ?>/assets/demo/demo.js"></script> 
 
-    <script src="<?php echo URL; ?>Public/js/vendor/jquery-2.1.4.min.js"></script>
+
+    <!-- <script src="<?php echo URL; ?>Public/js/vendor/jquery-2.1.4.min.js"></script>
     <script src="<?php echo URL; ?>Public/js/popper.min.js"></script>
     <script src="<?php echo URL; ?>Public/js/plugins.js"></script>
     <script src="<?php echo URL; ?>Public/js/main.js"></script>
-    <script src="<?php echo URL; ?>Public/js/pass.js"></script>
+    <script src="<?php echo URL; ?>Public/js/pass.js"></script> -->

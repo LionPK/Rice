@@ -565,7 +565,7 @@ class Userinfor_Model extends Model
 
         $messagebox = '
             <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
-                                            <span class="badge badge-pill badge-success">แก้ไขสำเร็จ</span>
+                                             <span class="badge badge-pill badge-success">แก้ไขสำเร็จ</span>
                                                 แก้ไขข้อมูลสำเร็จ
                                               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>

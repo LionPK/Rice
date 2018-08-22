@@ -1,31 +1,35 @@
-<?php  
-session_start();
-$message = Session::get('Message');
+<?php 
+    session_start();
+    $message = Session::get('Message');
 ?>
-<html class="no-js" lang=""><!--<![endif]--><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin - HTML5 Admin Template</title>
-    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
-
-   <link rel="stylesheet" href="<?php echo URL; ?>public/css/normalize.css">
-    <link rel="stylesheet" href="<?php echo URL; ?>public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo URL; ?>public/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo URL; ?>public/css/themify-icons.css">
-    <link rel="stylesheet" href="<?php echo URL; ?>public/css/flag-icon.min.css">
-    <link rel="stylesheet" href="<?php echo URL; ?>public/css/cs-skin-elastic.css">
-    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
-    <link rel="stylesheet" href="<?php echo URL; ?>public/scss/style.css">
-    <link href="<?php echo URL; ?>public/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
-
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ระบบจัดการข้อมูลการปลูกข้าว</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->  
+    <link rel="icon" type="image/png" href="<?php echo URL; ?>assets/images/icons/login_pic.png"/>
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>assets/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>assets/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>assets/vendor/animate/animate.css">
+<!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>assets/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>assets/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>assets/vendor/select2/select2.min.css">
+<!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>assets/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>assets/css/util.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>assets/css/main.css">
+<!--===============================================================================================-->
 </head>
 <body class="bg-dark">
 
@@ -36,47 +40,73 @@ $message = Session::get('Message');
 		?>
                                         
     </div>
-    <div class="sufee-login d-flex align-content-center flex-wrap">
-        <div class="container">
-            <div class="login-content">
-                <div class="login-logo">
-                    <!-- <a href="index.html">
-                        <img class="align-content" src="images/logo.png" alt="">
-                    </a> -->
-                </div>
-                <div class="login-form">
-                    <form action="index/run" method="post">
-                        <div class="form-group">
-                            <label>ขื่อผู้ใช้</label>
-                            <input type="text" class="form-control" placeholder="ชื่อผู้ใช้" id="login_username" name="login_username">
-                        </div>
-                        <div class="form-group">
-                            <label>รหัสผ่าน</label>
-                            <input type="password" class="form-control" placeholder="รหัสผ่าน" id="password" name="password">
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> จำรหัสผ่าน
-                            </label>
-                            
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('assets/images/farmer_wallpaper.png');">
+			<div class="wrap-login100">
+				<form action="index/run" method="post" class="login100-form validate-form">
+					<span class="login100-form-logo">
+						<!-- <i class="zmdi zmdi-landscape"></i> -->
+						<img src="<?php echo URL; ?>assets/images/icons/login_pic.png" width="90" height="90">
+						
+					</span>
 
-                        </div>
-                        <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">เข้าสู่ระบบ</button>
-                        
-                        
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+					<span class="login100-form-title p-b-34 p-t-27">
+					 	ระบบจัดการข้อมูลการปลูกข้าว
+					</span>
 
+					<div class="wrap-input100 validate-input" data-validate = "กรุณากรอกอีเมล์ (example@gmail.com)">
+						<input class="input100" type="text" id="login_username" name="login_username" placeholder="อีเมล์">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
 
-    <script src="<?php echo URL; ?>public/js/vendor/jquery-2.1.4.min.js"></script>
-    <script src="<?php echo URL; ?>public/js/popper.min.js"></script>
-    <script src="<?php echo URL; ?>public/js/plugins.js"></script>
-    <script src="<?php echo URL; ?>public/js/main.js"></script>
+					<div class="wrap-input100 validate-input" data-validate="กรุณากรอกรหัสผ่าน">
+						<input class="input100" type="password" id="password" name="password" placeholder="รหัสผ่าน">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
 
+					<div class="contact100-form-checkbox">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox100" for="ckb1">
+							จดจำรหัสผ่าน
+						</label>
+					</div>
 
+					<div class="container-login100-form-btn">
+						<button type="submit" class="login100-form-btn">
+							เข้าสู่ระบบ
+						</button>
+					</div>
 
+					<!-- <div class="text-center p-t-90">
+						<a class="txt1" href="#">
+							Forgot Password?
+						</a>
+					</div> -->
+				</form>
+			</div>
+		</div>
+	</div>
+	
 
-</body></html>
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+    <script src="<?php echo URL; ?>assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+    <script src="<?php echo URL; ?>assets/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+    <script src="<?php echo URL; ?>assets/vendor/bootstrap/js/popper.js"></script>
+    <script src="<?php echo URL; ?>assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+    <script src="<?php echo URL; ?>assets/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+    <script src="<?php echo URL; ?>assets/vendor/daterangepicker/moment.min.js"></script>
+    <script src="<?php echo URL; ?>assets/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+    <script src="<?php echo URL; ?>assets/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+    <script src="<?php echo URL; ?>assets/js/main.js"></script>
+
+</body>
+</html>

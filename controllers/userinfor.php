@@ -8,74 +8,74 @@ class UserInfor extends Controller {
     
     function index () {
         $this->view->render('header'); 
-        $this->view->render('left');
-        $this->view->render('Right');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('UserInfor/main');
     }
     function usera (){
-        $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        $this->view->render('header_profile');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('UserInfor/user1');
     }
      function edit (){
         $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('UserInfor/editprofile');
     }
        function rice (){
         $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('UserInfor/ricemanet');
     }
     function fertilizer (){
         $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('UserInfor/fertilizer');
     }
      function soil (){
         $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('UserInfor/soil');
     }
     function weed (){
         $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('UserInfor/weed');
     }
      function add (){
         $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('add/addprofile');
     }
     function addrice (){
         $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('add/Addrice');
     }
     function addsoil (){
         $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('add/addsoil');
     }
       function addweed (){
         $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('add/addweed');
     }
      function addfertilizer (){
         $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('add/addfertilizer');
     }
     /*--------------------------------------------------------------------------------------------------------
@@ -170,9 +170,9 @@ class UserInfor extends Controller {
 
     /*-----------------------------------------------------------------------------------------*/
      function edituser (){
-        $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        $this->view->render('header_profile');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('edit/editprofile');
     }
     function beforeedituser1(){
@@ -185,9 +185,9 @@ class UserInfor extends Controller {
 
 
      function editpass (){
-        $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        $this->view->render('header_profile');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('edit/editpass');
     }
     function beforeeditpass(){
@@ -243,9 +243,9 @@ class UserInfor extends Controller {
     }
 
     function showuser (){
-        $this->view->render('header');
-        $this->view->render('left');
-        $this->view->render('Right');
+        $this->view->render('header_profile');
+        // $this->view->render('left');
+        // $this->view->render('Right');
         $this->view->render('show/showuser');
 }
     function shuser(){
